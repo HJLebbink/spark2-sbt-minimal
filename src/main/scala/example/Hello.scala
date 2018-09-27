@@ -20,7 +20,7 @@ object Sample {
     spark.sparkContext.setLogLevel("WARN")
 
     val nThreads = spark.sparkContext.defaultParallelism
-    println(s"Starting Spark locally with $nThreads.")
+    println(s"Starting Spark locally with $nThreads threads.")
 
     val slices = nThreads
     val n = math.min(1000000L * slices, Int.MaxValue).toInt // avoid overflow
